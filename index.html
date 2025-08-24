@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup Database</title>
+    <link rel="stylesheet" href="/css/style1.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/topscorers.css">
+    <style>
+        /* Flexbox container for main content */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Table section */
+        .table-section {
+            flex: 1;
+        }
+
+        /* Top Teams section */
+        .teams-section {
+            flex: 1;
+        }
+
+        /* Styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Team card styling */
+        .team-card {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .team-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .team-card:hover .team-details {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header and footer styling */
+        .header, .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .header img {
+            height: 100px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .nav-links{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        .nav-links li{
+            margin:0 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <img src="/img/Leonardo_Phoenix_A_colorful_modern_and_dynamic_icon_depicting_3-removebg-preview.png" alt="World Cup Icon">
+            <h1>FIFA World Cup DB</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/index.html" style="text-decoration: none;">Home</a></li>
+                    <li><a href="/nav/Teams.html" style="text-decoration: none;">Teams</a></li>
+                    <li><a href="/nav/famous.html"style="text-decoration: none;">Famous</a></li>
+                    <li><a href="/nav/History.html"style="text-decoration: none;">History</a></li>
+                    <li><a href="/nav/contact.html"style="text-decoration: none;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Table Section -->
+        <div class="slider">
+            <div class="slides" id="slides">
+              <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/2016209185719_2016-07-27_Champions_for_Charity_-_Sven_-_1D_X_-_0149_-_DV3P4742_mod.jpg/320px-2016209185719_2016-07-27_Champions_for_Charity_-_Sven_-_1D_X_-_0149_-_DV3P4742_mod.jpg" alt="Klose">
+                    <div class="info">
+                        <h3>Miroslav Klose</h3>
+                        <div class="country">
+                            <img src="https://flagcdn.com/de.svg" alt="Germany Flag">
+                            <span>Germany</span>
+                        </div>
+                        <p>Matches: 24</p>
+                        <p>Goals: 16</p>
+                    </div>
+                </div>
+          
+            <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ronaldo_2002_cropped.jpg/250px-Ronaldo_2002_cropped.jpg" alt="Ronaldo">
+                <div class="info">
+                  <h3>Ronaldo Nazário</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/br.svg" alt="Brazil Flag">
+                    <span>Brazil</span>
+                  </div>
+                  <p>Matches: 19</p>
+                  <p>Goals: 15</p>
+                </div>
+            </div>
+          
+            <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Gerd_M%C3%BCller_c1973_%28cropped%29.jpg/360px-Gerd_M%C3%BCller_c1973_%28cropped%29.jpg" alt="Gerd Muller">
+                <div class="info">
+                  <h3>Gerd Müller</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/de.svg" alt="Germany Flag">
+                    <span>Germany</span>
+                  </div>
+                  <p>Matches: 13</p>
+                  <p>Goals: 14</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/359px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg" alt="Lionel Messi">
+                <div class="info">
+                  <h3>Lionel Messi</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/ar.svg" alt="Argentina Flag">
+                    <span>Argentina</span>
+                  </div>
+                  <p>Matches: 26</p>
+                  <p>Goals: 13</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pele_con_brasil_%28cropped%29.jpg/353px-Pele_con_brasil_%28cropped%29.jpg" alt="Pelé">
+                <div class="info">
+                  <h3>Pelé</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/br.svg" alt="Brazil Flag">
+                    <span>Brazil</span>
+                  </div>
+                  <p>Matches: 14</p>
+                  <p>Goals: 12</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mbappe_before_Real_Madrid_vs_Alaves_3_-_2_Matchday_7_La_Liga_2024_%28cropped%29.jpg/333px-Mbappe_before_Real_Madrid_vs_Alaves_3_-_2_Matchday_7_La_Liga_2024_%28cropped%29.jpg" alt="Kylian Mbappé">
+                <div class="info">
+                  <h3>Kylian Mbappé</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/fr.svg" alt="France Flag">
+                    <span>France</span>
+                  </div>
+                  <p>Matches: 14</p>
+                  <p>Goals: 12</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Gary_Linekar.jpg/250px-Gary_Linekar.jpg" alt="Gary Lineker">
+                <div class="info">
+                  <h3>Gary Lineker</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/gb.svg" alt="England Flag">
+                    <span>England</span>
+                  </div>
+                  <p>Matches: 12</p>
+                  <p>Goals: 10</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Eusebio_en_1973.jpg/361px-Eusebio_en_1973.jpg" alt="Eusébio">
+                <div class="info">
+                  <h3>Eusébio</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/pt.svg" alt="Portugal Flag">
+                    <span>Portugal</span>
+                  </div>
+                  <p>Matches: 6</p>
+                  <p>Goals: 9</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Spain-Tahiti%2C_Confederations_Cup_2013_%2802%29_%28Villa_crop%29.jpg/326px-Spain-Tahiti%2C_Confederations_Cup_2013_%2802%29_%28Villa_crop%29.jpg" alt="David Villa">
+                <div class="info">
+                  <h3>David Villa</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/es.svg" alt="Spain Flag">
+                    <span>Spain</span>
+                  </div>
+                  <p>Matches: 12</p>
+                  <p>Goals: 9</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Rivaldo_bunyodkor_2010.jpg" alt="Rivaldo">
+                <div class="info">
+                  <h3>Rivaldo</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/br.svg" alt="Brazil Flag">
+                    <span>Brazil</span>
+                  </div>
+                  <p>Matches: 14</p>
+                  <p>Goals: 8</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Argentina_celebrando_copa_%28cropped%29.jpg/306px-Argentina_celebrando_copa_%28cropped%29.jpg" alt="Diego Maradona">
+                <div class="info">
+                  <h3>Diego Maradona</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/ar.svg" alt="Argentina Flag">
+                    <span>Argentina</span>
+                  </div>
+                  <p>Matches: 21</p>
+                  <p>Goals: 8</p>
+                </div>
+              </div>
+              
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Thierry_Henry_2008.jpg/250px-Thierry_Henry_2008.jpg" alt="Thierry Henry">
+                <div class="info">
+                  <h3>Thierry Henry</h3>
+                  <div class="country">
+                    <img src="https://flagcdn.com/fr.svg" alt="France Flag">
+                    <span>France</span>
+                  </div>
+                  <p>Matches: 17</p>
+                  <p>Goals: 6</p>
+                </div>
+              </div>
+              
+            </div>
+          
+            <div class="buttons">
+              <button onclick="prevSlide()">❮</button>
+              <button onclick="nextSlide()">❯</button>
+            </div>
+        </div>
+        <script>
+            let currentIndex = 0;
+            const slides = document.getElementById("slides");
+            const totalSlides = slides.children.length;
+          
+            function showSlide(index) {
+              if (index >= totalSlides) currentIndex = 0;
+              else if (index < 0) currentIndex = totalSlides - 1;
+              else currentIndex = index;
+          
+              slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+          
+            function nextSlide() {
+              showSlide(currentIndex + 1);
+            }
+          
+            function prevSlide() {
+              showSlide(currentIndex - 1);
+            }
+          
+            // Auto slide every 3 seconds
+            setInterval(nextSlide, 3000);
+          </script>
+        
+        
+          
+
+        <!-- Top Teams Section -->
+        <div class="teams-section">
+            <h2>Top Teams</h2>
+            <!-- Team Card Example -->
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/Brazil waving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>Brazil</h3>
+                    <p>Wins: 5</p>
+                    <p>Finals: 7</p>
+                </div>
+            </div>
+            <!-- Repeat the team card for each team -->
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/Germany waving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>Germany</h3>
+                    <p>Wins: 4</p>
+                    <p>Finals: 8</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/Italy waving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>Italy</h3>
+                    <p>Wins: 4</p>
+                    <p>Finals: 6</p>
+                </div>
+            </div>
+            
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/Argentina waving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>Argentina</h3>
+                    <p>Wins: 3</p>
+                    <p>Finals: 6</p>
+                </div>
+            </div>
+            
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/France waving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>France</h3>
+                    <p>Wins: 2</p>
+                    <p>Finals: 4</p>
+                </div>
+            </div>
+            
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/Uruguay waving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>Uruguay</h3>
+                    <p>Wins: 2</p>
+                    <p>Finals: 2</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/vecteezy_england-flag-seamless-loop-animation-the-national-flag-of_18976836.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>England</h3>
+                    <p>Wins: 1</p>
+                    <p>Finals: 1</p>
+                </div>
+            </div>
+            
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/Spain waving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>Spain</h3>
+                    <p>Wins: 1</p>
+                    <p>Finals: 1</p>
+                </div>
+            </div>
+            
+            <div class="team-card">
+                <video autoplay loop muted class="team-video">
+                    <source src="/video/Netherland waving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="team-details">
+                    <h3>Netherlands</h3>
+                    <p>Wins: 0</p>
+                    <p>Finals: 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 World Cup Database. All rights reserved.</p>
+    </footer>
+</body>
+</html>
