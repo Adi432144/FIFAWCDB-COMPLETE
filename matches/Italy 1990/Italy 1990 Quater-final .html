@@ -2,25 +2,42 @@
     <link rel="stylesheet" href="/matches/match.css">
     <thead>
         <tr>
-            <th>Final</th>
+            <th>Semi-final</th>
             <th>Flag</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Spain</td>
-            <td><img src="/img/small_750px-Flag_of_Spain.svg.png" alt="Qatar Flag" width="50"></td>
+            <td>Argentina</td>
+            <td><img src="/img/small_800px-Flag_of_Argentina.svg.png" alt="Qatar Flag" width="50"></td>
         </tr>
         <tr>
-            <td>Brazil</td>
-            <td><img src="/img/small_720px-Flag_of_Brazil.svg.png" alt="Qatar Flag" width="50"></td>
-        </tr><tr>
-            <td>Sweden</td>
-            <td><img src="/img/Flag_of_Sweden.svg.webp" alt="Qatar Flag" width="50"></td>
+            <td>Yugoslavia</td>
+            <td><img src="/img/Flag_of_Yugoslavia_(1946-1992).svg.png" alt="Ecuador Flag" width="50"></td>
         </tr>
         <tr>
-            <td>Uruguay</td>
-            <td><img src="/img/Flag_of_Uruguay.svg.webp" alt="Ecuador Flag" width="50"></td>
+            <td>Italy</td>
+            <td><img src="/img/small_800px-Flag_of_Italy.svg.png" alt="Senegal Flag" width="50"></td>
+        </tr>
+        <tr>
+            <td>Ireland</td>
+            <td><img src="/img/23px-Flag_of_Ireland.svg.png" alt="Netherlands Flag" width="50"></td>
+        </tr>
+        <tr>
+            <td>Germany</td>
+            <td><img src="/img/small_800px-Flag_of_Germany.svg.png" alt="Senegal Flag" width="50"></td>
+        </tr>
+        <tr>
+            <td>Cezch Republic</td>
+            <td><img src="/img/Flag_of_the_Czech_Republic.svg.webp" alt="Netherlands Flag" width="50"></td>
+        </tr>
+        <tr>
+            <td>England</td>
+            <td><img src="/img/small_800px-Flag_of_England.svg.png" alt="Senegal Flag" width="50"></td>
+        </tr>
+        <tr>
+            <td>Cameroon</td>
+            <td><img src="/img/23px-Flag_of_Cameroon.svg.png" alt="Netherlands Flag" width="50"></td>
         </tr>
     </tbody>
 </table>
@@ -54,16 +71,49 @@
         </thead>
         <tbody>
             <tr>
-                <td>Argentina vs France</td>
-                <td>December 18, 2022</td>
-                <td>Argentina</td>
-                <td>7 : 5 on penalties</td>
-                <td>France</td>
-                <td>
-                    <p>Argentina: Lionel Messi 23', 108', Ángel Di María 36'</p>
-                    <p>France: Kylian Mbappé 80', 81', 118'</p>
-                </td>
-            </tr>
+    <td>Yugoslavia vs. Argentina</td>
+    <td>June 30, 1990</td>
+    <td>Yugoslavia</td>
+    <td>0 : 0 (2 : 3 pens)</td>
+    <td>Argentina</td>
+    <td>
+        <p>Penalty shoot-out: Argentina won 3–2</p>
+    </td>
+</tr>
+
+<tr>
+    <td>Italy vs. Republic of Ireland</td>
+    <td>July 1, 1990</td>
+    <td>Italy</td>
+    <td>1 : 0</td>
+    <td>Republic of Ireland</td>
+    <td>
+        <p>Italy: Schillaci 38'</p>
+    </td>
+</tr>
+
+<tr>
+    <td>Germany vs. Czechoslovakia</td>
+    <td>July 1, 1990</td>
+    <td>Germany</td>
+    <td>1 : 0</td>
+    <td>Czechoslovakia</td>
+    <td>
+        <p>Germany: Matthäus 24'</p>
+    </td>
+</tr>
+
+<tr>
+    <td>England vs. Cameroon</td>
+    <td>July 2, 1990</td>
+    <td>England</td>
+    <td>3 : 2 (AET)</td>
+    <td>Cameroon</td>
+    <td>
+        <p>England: Platt 25', Lineker 83', 104' (pen)</p>
+        <p>Cameroon: Kundé 61' (pen), Ekéké 65'</p>
+    </td>
+</tr>
         </tbody>
     </table>
     <style>
@@ -94,58 +144,13 @@
             background-color: #0056b3;
             transform: scale(1.1); /* Scale up the button slightly */
         }
-        .container{
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        #myImage {
-            display:flex; /* Hidden by default */
-            margin-top: 20px;
-            width: 200px;
-        }
-        #showButton {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            display: block;
-            margin: 0 auto;
-        }
     </style>
-    <button id="showButton">Winner</button>
-
-    <!-- Hidden image -->
-    <div class="container">
-        <img id="myImage" src="/img/cup lift/Uruguay 1950-world-cup-lift.webp" alt="Displayed Image">
-    </div>
-    <!-- Sound file -->
-    <audio id="mySound" src="/sound/firework_single-83058.mp3"></audio>
-
-    <script>
-        // Get the button, image, and sound elements
-        const button = document.getElementById("showButton");
-        const image = document.getElementById("myImage");
-        const sound = document.getElementById("mySound");
-
-        // Add click event listener to the button
-        button.addEventListener("click", function() {
-            // Display the image
-            image.style.display = "block";
-            
-            // Play the sound
-            sound.play();
-        });
-        window.addEventListener("load", function() {
-            image.style.display = "none";
-        });
-    </script>
    <div style="display: grid; justify-content: center;align-items: center; ">
-        <a class="btn" href="http://127.0.0.1:5500/index.html"style="text-decoration: none;">Home</a>
-    </div>
+    <a class="btn" href="http://127.0.0.1:5500/index.html"style="text-decoration: none;">Home</a>
+</div>
     <div style="display: grid; justify-content: center;align-items: center; text-decoration: none;">
-        <a class="btn" href="FIFA World Cup 2022.html" style="text-decoration: none;"> FIFA World Cup 2022</a>
-    </div>
+    <a class="btn" href="FIFA World Cup 2022.html" style="text-decoration: none;"> FIFA World Cup 2022</a>
+</div>
 
     <footer class="footer">
         <p>&copy; 2024 FIFA World Cup Database. All rights reserved.</p>

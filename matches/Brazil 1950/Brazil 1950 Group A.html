@@ -168,6 +168,33 @@
             transform: scale(1.1); /* Scale up the button slightly */
         }
     </style>
+    <button id="showButton">Winner</button>
+
+    <!-- Hidden image -->
+    <div class="container">
+        <img id="myImage" src="/img/cup lift/Uruguay 1950-world-cup-lift.webp" alt="Displayed Image">
+    </div>
+    <!-- Sound file -->
+    <audio id="mySound" src="/sound/firework_single-83058.mp3"></audio>
+
+    <script>
+        // Get the button, image, and sound elements
+        const button = document.getElementById("showButton");
+        const image = document.getElementById("myImage");
+        const sound = document.getElementById("mySound");
+
+        // Add click event listener to the button
+        button.addEventListener("click", function() {
+            // Display the image
+            image.style.display = "block";
+            
+            // Play the sound
+            sound.play();
+        });
+        window.addEventListener("load", function() {
+            image.style.display = "none";
+        });
+    </script>
    <div style="display: grid; justify-content: center;align-items: center; ">
     <a class="btn" href="http://127.0.0.1:5500/index.html"style="text-decoration: none;">Home</a>
 </div>
