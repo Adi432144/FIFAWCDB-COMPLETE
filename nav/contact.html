@@ -5,43 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - FIFA World Cup Database</title>
     <link rel="stylesheet" href="styles.css">
-    <header class="header">
-        <div class="header-content">
-            <img src="/img/Leonardo_Phoenix_A_colorful_modern_and_dynamic_icon_depicting_3-removebg-preview.png" alt="World Cup Icon">
-            <h1>FIFA World Cup DB</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/index.html" style="text-decoration: none;">Home</a></li>
-                    <li><a href="/Teams.html" style="text-decoration: none;">Teams</a></li>
-                    <li><a href="/famous.html"style="text-decoration: none;">Famous</a></li>
-                    <li><a href="History.html"style="text-decoration: none;">History</a></li>
-                    <li><a href="/contact.html"style="text-decoration: none;">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <link rel="stylesheet" href="/nav/nav.css">
+
     <style>
-        /* Contact Page Styles */
+        /* ==========================================================================
+           Global & Layout Reset
+           ========================================================================== */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f2f2f2;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #000000;
         }
+
+        /* ==========================================================================
+           Header Component (Centered & Fixed Image Constraints)
+           ========================================================================== */
+        .header {
+            background-color: #f8f9fa; /* Light clean background for clarity */
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column; /* Stacks image on top of the text */
+            align-items: center;    /* Horizontally centers the items */
+            justify-content: center;/* Vertically centers the items */
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content img {
+            width: 80px;            /* Explicit modern width control */
+            height: auto;           /* Maintains perfect aspect ratio */
+            margin-bottom: 10px;    /* Elegant spacing between image and title */
+        }
+
+        .header-content h1 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #333333;
+        }
+
+        /* ==========================================================================
+           Contact Page Components
+           ========================================================================== */
         .contact-header {
             background: url('img/football-stadium.jpg') no-repeat center center/cover;
-            color: white;
+            color: rgb(0, 0, 0);
             text-align: center;
             padding: 100px 0;
+            margin-left: 0;         /* Fixed structural offset to ensure page alignment */
         }
+
         .contact-header h1 {
             font-size: 3em;
             margin: 0;
         }
+
         .contact-header p {
             font-size: 1.5em;
         }
+
         .contact-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -50,6 +79,7 @@
             justify-content: space-between;
             gap: 40px;
         }
+
         .contact-info, .contact-form {
             width: 48%;
             background-color: white;
@@ -57,22 +87,27 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         .contact-info h2, .contact-form h2 {
             text-align: center;
             font-size: 2em;
             margin-bottom: 20px;
         }
+
         .contact-info p {
             font-size: 1.2em;
             margin: 10px 0;
         }
+
         .contact-info p a {
             color: #007bff;
             text-decoration: none;
         }
+
         .contact-info p a:hover {
             text-decoration: underline;
         }
+
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 15px;
@@ -80,7 +115,9 @@
             border: 2px solid #ddd;
             border-radius: 5px;
             font-size: 1.1em;
+            box-sizing: border-box; /* Prevents input padding from breaking layouts */
         }
+
         .contact-form button {
             background-color: #28a745;
             color: white;
@@ -90,15 +127,22 @@
             font-size: 1.2em;
             cursor: pointer;
         }
+
         .contact-form button:hover {
             background-color: #218838;
         }
+
+        /* ==========================================================================
+           Footer Component
+           ========================================================================== */
         .footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px;
+            margin-top: 40px;
         }
+
         .footer p {
             margin: 0;
         }
@@ -106,26 +150,55 @@
 </head>
 <body>
 
-    <!-- Contact Header -->
+    <nav class="cdpn-mobile-menu js-cdpn-mobile-menu">
+        <div id="cdpn-mobile-menu" class="cdpn-mobile-menu__container">
+            <ul class="cdpn-mobile-menu__list ra-list">
+                <li><a href="/index.html" class="js-cdpn-mobile-menu__link uia-control ra-link"><span class="uia-control__group">Home</span></a></li>
+                <li><a href="/nav/Teams.html" class="js-cdpn-mobile-menu__link uia-control ra-link"><span class="uia-control__group">Teams</span></a></li>
+                <li><a href="/nav/famous.html" class="cdpn-mobile-menu__link uia-control ra-link"><span class="uia-control__group">Famous</span></a></li>
+                <li><a href="/nav/History.html" class="js-cdpn-mobile-menu__link uia-control ra-link"><span class="uia-control__group">History</span></a></li>
+                <li><a href="/nav/contact.html" class="js-cdpn-mobile-menu__link uia-control ra-link"><span class="uia-control__group">Contact</span></a></li>
+            </ul>
+        </div>
+        <button class="cdpn-mobile-menu__toggle js-cdpn-mobile-menu__toggle uia-control ra-button" type="button" aria-controls="cdpn-mobile-menu" data-uia-hamburger-skin="2">
+            <span class="uia-control__group">
+                <span class="cdpn-mobile-menu__hamburger uia-control__icon uia-hamburger">
+                    <span class="uia-hamburger__group">
+                        <span class="uia-hamburger__label">
+                            <span class="js-cdpn-mobile-menu__toggle-hint ha-screen-reader">Open menu</span>
+                        </span>
+                    </span>
+                </span>
+            </span>
+        </button>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <img src="/img/Leonardo_Phoenix_A_colorful_modern_and_dynamic_icon_depicting_3-removebg-preview.png" alt="World Cup Icon">
+            <h1>FIFA World Cup DB</h1>
+        </div>
+    </header>
+
     <div class="contact-header">
         <h1>Get in Touch with Us</h1>
         <p>We’re here to assist you with any questions or feedback</p>
     </div>
 
-    <!-- Contact Form Section -->
-    <div class="contact-container">
-        <!-- Contact Information Section -->
-        <div class="contact-info">
+    <main class="contact-container">
+        <section class="contact-info">
             <h2>Contact Information</h2>
-            <p><strong>Phone:</strong> +1 234 567 890</p>
-            <p><strong>Email:</strong> <a href="mailto:contact@fifaworldcupdatabase.com">contact@fifaworldcupdatabase.com</a></p>
-            <p><strong>Address:</strong> 123 Football Lane, Soccer City, USA</p>
+            <p><strong>Phone:</strong> +91 8532954649</p>
+            <p><strong>Email:</strong> <a href="mailto:mdadiprivate31@gmail.com">mdadiprivate31@gmail.com</a></p>
             <p><strong>Follow Us:</strong></p>
-            <p><a href="https://twitter.com/fifaworldcupdb" target="_blank">Twitter</a> | <a href="https://facebook.com/fifaworldcupdb" target="_blank">Facebook</a> | <a href="https://instagram.com/fifaworldcupdb" target="_blank">Instagram</a></p>
-        </div>
+            <p>
+                <a href="https://twitter.com/fifaworldcupdb" target="_blank" rel="noopener">Twitter</a> | 
+                <a href="https://facebook.com/fifaworldcupdb" target="_blank" rel="noopener">Facebook</a> | 
+                <a href="https://instagram.com/fifaworldcupdb" target="_blank" rel="noopener">Instagram</a>
+            </p>
+        </section>
 
-        <!-- Contact Form Section -->
-        <div class="contact-form">
+        <section class="contact-form">
             <h2>Send Us a Message</h2>
             <form action="submit_contact.php" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -133,13 +206,13 @@
                 <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <!-- Footer Section -->
-    <div class="footer">
-        <p>&copy; 2025 FIFA World Cup Database | All Rights Reserved</p>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2026 FIFA World Cup Database | All Rights Reserved</p>
+    </footer>
 
+    <script src="/nav/nav.js"></script>
 </body>
 </html>
